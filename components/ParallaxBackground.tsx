@@ -9,9 +9,8 @@ export const ParallaxBackground = (props: IProps) => {
   const { children, backgroundImage } = props;
   return (
     <Parallax
-      blur={0}
       bgImage={backgroundImage}
-      strength={500}
+      strength={800}
       bgImageStyle={{ minHeight: "100vh" }}
     >
       {children}
