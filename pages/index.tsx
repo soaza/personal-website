@@ -9,7 +9,7 @@ import { Works } from "../components/Works";
 const Home: NextPage = () => {
   return (
     <>
-      <div className="h-screen">
+      <div className="h-screen ">
         <About />
       </div>
 
