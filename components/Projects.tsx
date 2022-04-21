@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Project } from "./Project";
 
 export const Projects = () => {
   const [showProjects, setShowProjects] = useState(false);
@@ -11,14 +12,20 @@ export const Projects = () => {
       className={` h-screen flex justify-center items-center`}
     >
       <div>
-        <div className="text-white text-6xl font-extrabold">My Projects</div>
+        <div className="text-black text-6xl font-extrabold text-center">
+          projects
+        </div>
 
         <div
-          className={`w-30 bg-white text-black duration-[4000ms] ease-in-out  ${
-            showProjects ? "opacity-100" : "opacity-0 h-0"
+          className={`  duration-[4000ms] ease-in-out mt-2 ${
+            showProjects ? "opacity-100" : "opacity-0 h-0 w-0"
           }`}
         >
-          dasdas
+          <div className=" text-right text-xl text-gray-400  ">
+            personal projects I have worked on.
+          </div>
+
+          <Project />
         </div>
 
         <div
@@ -27,16 +34,16 @@ export const Projects = () => {
               ? {
                   visibility: "hidden",
                   opacity: "0",
-                  marginTop: "80vh",
+                  marginTop: "60vh",
                   transition:
                     " visibility 0s 2s, opacity 2s linear, margin-top 2s",
                 }
               : {}
           }
           onClick={() => setShowProjects(true)}
-          className={`cursor-pointer hover:underline text-gray-200 text-xl font-semibold text-right`}
+          className={`cursor-pointer hover:underline text-gray-400 text-xl font-semibold text-center`}
         >
-          Click to see
+          click to see.
         </div>
       </div>
     </div>

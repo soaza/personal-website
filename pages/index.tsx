@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { NextPage } from "next";
+import { About } from "../components/About";
 import MotionScroll from "../components/MotionScroll";
 import { ParallaxBackground } from "../components/ParallaxBackground";
 import { Projects } from "../components/Projects";
@@ -7,20 +8,17 @@ import { Projects } from "../components/Projects";
 const Home: NextPage = () => {
   return (
     <>
-      <ParallaxBackground backgroundImage="/images/bg-2.jpg">
-        <div className="h-screen flex justify-center items-center">
-          <span>
-            <div className="text-white text-6xl font-extrabold">Kim Guan</div>
-            <div className=" text-white text-center text-xl font-semibold">
-              Full-Stack Developer
-            </div>
-          </span>
-        </div>
-      </ParallaxBackground>
+      <div className="h-screen">
+        <About />
+      </div>
 
-      <ParallaxBackground backgroundImage="/images/bg.jpg">
+      <div className="flex justify-center">
+        {/* <div className="border w-1/2" /> */}
+      </div>
+
+      <div className="h-screen p-5">
         <Projects />
-      </ParallaxBackground>
+      </div>
     </>
   );
 };
