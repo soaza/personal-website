@@ -13,12 +13,14 @@
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-parallax": "^3.3.0"
+    "react-parallax": "^3.3.0",
+    "react-scrollspy": "^3.4.3"
   },
   "devDependencies": {
     "@types/node": "17.0.25",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
+    "@types/react-scrollspy": "^3.3.5",
     "autoprefixer": "^10.4.4",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",

@@ -6,15 +6,17 @@ export const WorkExperience = (props: { work: IWork }) => {
 
   return (
     <div className=" mt-11">
-      <div className="flex row-auto justify-between">
-        <div className="col-auto">
+      <div className="lg:flex lg:row-auto lg:justify-between">
+        <div className="lg:col-auto ">
           <div className="text-3xl lg:text-4xl cursor-pointer hover:underline mb-2 font-extrabold">
             {work.company_name}
           </div>
           <div className="text-xl text-gray-400">{work.role}</div>
         </div>
 
-        <img className=" h-24 w-24 object-contain" src={work.company_image} />
+        <div className="mt-4 flex justify-center">
+          <img className=" h-24 w-24 object-contain" src={work.company_image} />
+        </div>
       </div>
 
       <div className="text-md lg:text-xl">

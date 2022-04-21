@@ -29,7 +29,7 @@ export const Section = (props: { sectionData: any }) => {
 
         <div
           className={`  duration-[4000ms] ease-in-out mt-2 ${
-            showContent ? "opacity-100" : "opacity-0 h-0 w-0 select-none"
+            showContent ? "opacity-100" : "opacity-0 select-none"
           }`}
         >
           <div className=" text-center lg:text-right text-xl text-gray-400  ">
