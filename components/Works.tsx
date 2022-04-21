@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { WORK_EXPERIENCES } from "../common/constants";
 import { Project } from "./Project";
+import { WorkExperience } from "./WorkExperience";
 
-export const Projects = () => {
-  const [showProjects, setShowProjects] = useState(false);
+export const Works = () => {
+  const [showWork, setShowWork] = useState(false);
 
   return (
     <div
@@ -12,34 +14,36 @@ export const Projects = () => {
       className={` h-screen flex justify-center items-center`}
     >
       <div>
-        <div className="text-black text-6xl font-extrabold text-center">
-          projects
+        <div className="text-black text-6xl font-extrabold text-center select-none">
+          work experience
         </div>
 
         <div
           className={`  duration-[4000ms] ease-in-out mt-2 ${
-            showProjects ? "opacity-100" : "opacity-0 h-0 w-0"
+            showWork ? "opacity-100" : "opacity-0 h-0 w-0 select-none"
           }`}
         >
-          <div className=" text-right text-xl text-gray-400  ">
-            personal projects I have worked on.
+          <div className=" text-center lg:text-right text-xl text-gray-400  ">
+            companies i have worked with.
           </div>
 
-          <Project />
+          {WORK_EXPERIENCES.map((work, index) => {
+            return <WorkExperience key={index} work={work} />;
+          })}
         </div>
 
         <div
           style={
-            showProjects
+            showWork
               ? {
                   visibility: "hidden",
                   opacity: "0",
                   top: "60vh",
-                  transition: " visibility 0s 2s, opacity 2s linear, top 1s",
+                  transition: " visibility 0s 2s, opacity 2s linear, top 2s",
                 }
               : {}
           }
-          onClick={() => setShowProjects(true)}
+          onClick={() => setShowWork(true)}
           className={`cursor-pointer hover:underline text-gray-400 text-xl font-semibold text-center`}
         >
           click to see.

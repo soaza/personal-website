@@ -4,6 +4,7 @@ import { About } from "../components/About";
 import MotionScroll from "../components/MotionScroll";
 import { ParallaxBackground } from "../components/ParallaxBackground";
 import { Projects } from "../components/Projects";
+import { Works } from "../components/Works";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,11 @@ const Home: NextPage = () => {
         {/* <div className="border w-1/2" /> */}
       </div>
 
-      <div className="h-screen p-5">
+      <div className="h-screen p-10">
+        <Works />
+      </div>
+
+      <div className="h-screen p-10">
         <Projects />
       </div>
     </>
