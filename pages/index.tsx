@@ -18,14 +18,19 @@ const SECTIONS = [
   },
 ];
 
+const Fade = require("react-reveal/Fade");
+
 const Home: NextPage = () => {
   return (
     <>
       <Scrollspy
-        className=" opacity-0 lg:opacity-100  fixed top-1/4 left-0  min-h-screen px-2 py-12 flex flex-col gap-5"
-        items={["section-1", "section-2"]}
+        className=" opacity-0 lg:opacity-100  fixed top-1/3 left-0  min-h-screen px-2 py-12 flex flex-col gap-5"
+        items={["section-0", "section-1", "section-2", "section-3"]}
         currentClassName="text-gray-400"
       >
+        <li>
+          <a href="#section-0">me.</a>
+        </li>
         <li>
           <a href="#section-1">Work Experience</a>
         </li>
@@ -37,8 +42,10 @@ const Home: NextPage = () => {
         </li>
       </Scrollspy>
 
-      <div className="h-screen ">
-        <About />
+      <div id="section-0" className="h-screen ">
+        <Fade bottom>
+          <About />
+        </Fade>
       </div>
 
       <div className="flex justify-center">

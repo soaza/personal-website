@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const Fade = require("react-reveal/Fade");
 
 export const Section = (props: { sectionData: any }) => {
   const { sectionData } = props;
@@ -11,32 +12,19 @@ export const Section = (props: { sectionData: any }) => {
           {sectionData.title}
         </div>
 
-        <div
-          style={
-            showContent
-              ? {
-                  visibility: "hidden",
-                  opacity: "0",
-                  transition: " visibility 0s 2s, opacity 2s linear",
-                }
-              : {}
-          }
+        {/* <div
           onClick={() => setShowContent(true)}
           className={`cursor-pointer hover:underline text-gray-400 text-xl font-semibold text-center`}
         >
           click to see.
-        </div>
+        </div> */}
 
-        <div
-          className={`  duration-[4000ms] ease-in-out mt-2 ${
-            showContent ? "opacity-100" : "opacity-0 select-none"
-          }`}
-        >
+        <div className={`  duration-[4000ms] ease-in-out mt-2`}>
           <div className=" text-center lg:text-right text-xl text-gray-400  ">
             {sectionData.subtitle}
           </div>
 
-          {sectionData.child}
+          <Fade bottom>{sectionData.child}</Fade>
         </div>
       </div>
     </div>
