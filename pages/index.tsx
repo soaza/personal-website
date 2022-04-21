@@ -1,10 +1,22 @@
-import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import { About } from "../components/About";
-import MotionScroll from "../components/MotionScroll";
-import { ParallaxBackground } from "../components/ParallaxBackground";
 import { Projects } from "../components/Projects";
+
+import { Section } from "../components/Section";
 import { Works } from "../components/Works";
+
+const SECTIONS = [
+  {
+    title: "work experience",
+    subtitle: "companies i have worked with.",
+    child: <Works />,
+  },
+  {
+    title: "projects",
+    subtitle: "personal projects I have worked on.",
+    child: <Projects />,
+  },
+];
 
 const Home: NextPage = () => {
   return (
@@ -17,13 +29,13 @@ const Home: NextPage = () => {
         {/* <div className="border w-1/2" /> */}
       </div>
 
-      <div className="h-screen p-10">
-        <Works />
-      </div>
-
-      <div className="h-screen p-10">
-        <Projects />
-      </div>
+      {SECTIONS.map((sectionData) => {
+        return (
+          <div className="min-h-screen p-10">
+            <Section sectionData={sectionData} />
+          </div>
+        );
+      })}
     </>
   );
 };
