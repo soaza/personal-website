@@ -7,7 +7,7 @@ export const WorkExperience = (props: { work: IWork }) => {
   return (
     <div className=" mt-11">
       <div className="lg:flex lg:row-auto lg:justify-between">
-        <div className="lg:col-auto ">
+        <div className="lg:col-auto  self-end ">
           <div className="text-3xl lg:text-4xl cursor-pointer hover:underline mb-2 font-extrabold">
             {work.company_name}
           </div>
@@ -19,7 +19,7 @@ export const WorkExperience = (props: { work: IWork }) => {
         </div>
       </div>
 
-      <div className="text-md lg:text-xl">
+      <div className="text-md lg:text-base">
         <>
           {work.details.map((detail, index) => {
             return (
