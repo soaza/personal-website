@@ -1,4 +1,5 @@
 import React from "react";
+import { ICONS_MAP } from "../common/constants";
 import { IWork } from "../common/interfaces";
 import { TechIcon } from "./TechIcon";
 
@@ -32,10 +33,13 @@ export const WorkExperience = (props: { work: IWork }) => {
         </>
       </div>
 
-      <TechIcon
-        name="React"
-        imgLink="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-      />
+      <div className="flex row-auto gap-3">
+        {ICONS_MAP.map((icon, index) => {
+          return (
+            <TechIcon key={index} name={icon.name} imgLink={icon.imgLink} />
+          );
+        })}
+      </div>
     </div>
   );
 };

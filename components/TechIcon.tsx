@@ -10,9 +10,9 @@ export const TechIcon = (props: IIcons) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className=" flex flex-col col-span-1 w-12 justify-center"
+      className=" flex flex-col col-span-1 justify-center"
     >
-      <img className=" place-self-center" src={imgLink} />
+      <img className=" place-self-center w-12 h-12" src={imgLink} />
 
       <p
         className={`text-center text-gray-400 ${
