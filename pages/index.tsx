@@ -63,10 +63,6 @@ const Home: NextPage = () => {
             className="min-h-screen p-12 flex justify-center "
           >
             <Section sectionData={sectionData} />
-
-            <div className="flex justify-center">
-              <div className="border w-1/2" />
-            </div>
           </div>
         );
       })}

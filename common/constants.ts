@@ -20,6 +20,17 @@ export const WORK_EXPERIENCES: IWork[] = [
     ],
   },
   {
+    company_name: "Google Developer Student Club NUS",
+    company_image: "/images/company-logos/gdsc.png",
+    role: "Front-End Lead",
+    date_joined: "Aug 2021",
+    date_left: "Present",
+    details: [
+      "• Led and built the front-end of a platform for promoting mental well-being for social good",
+    ],
+    tech_stack: ["Typescript", "React", "Redux", "MaterialUI"],
+  },
+  {
     company_name: "Binance",
     company_image: "/images/company-logos/binance.png",
     role: "Software Engineer Intern",

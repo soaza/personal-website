@@ -21,7 +21,7 @@ export const WorkExperience = (props: { work: IWork }) => {
         </div>
       </div>
 
-      <div className="text-md lg:text-xl max-w-5xl mb-5">
+      <div className="text-md lg:text-xl max-w-5xl mb-12">
         <>
           {work.details.map((detail, index) => {
             return (
