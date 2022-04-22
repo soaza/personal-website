@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Border } from "./Border";
 const Fade = require("react-reveal/Fade");
 
 export const Section = (props: { sectionData: any }) => {
   const { sectionData } = props;
-  const [showContent, setShowContent] = useState(false);
 
   return (
-    <div className="w-full lg:px-48">
+    <div className="w-full xl:px-64 2xl:px-96">
       <div className="text-black text-6xl font-extrabold text-center select-none">
         {sectionData.title}
       </div>
