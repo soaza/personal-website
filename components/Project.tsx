@@ -34,7 +34,7 @@ export const Project = () => {
         }}
         className=" grid lg:grid-flow-col gap-2 items-center lg:max-w-max "
       >
-        {ICONS_MAP.map((stack, index) => {
+        {ICONS_MAP.slice(0, 5).map((stack, index) => {
           return <TechIcon key={index} name={stack.name} />;
         })}
       </div>
