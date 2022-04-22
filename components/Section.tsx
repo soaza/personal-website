@@ -12,15 +12,14 @@ export const Section = (props: { sectionData: any }) => {
         {sectionData.title}
       </div>
 
-      <div className={` mt-2`}>
+      <div className={`mt-2 mb-5`}>
         <div className=" text-center text-xl text-gray-400  ">
           <Fade right> {sectionData.subtitle}</Fade>
         </div>
 
         <Fade bottom>{sectionData.child}</Fade>
-
-        <Border />
       </div>
+      <Border />
     </div>
   );
 };

@@ -26,6 +26,10 @@ const Home: NextPage = () => {
           </div>
         );
       })}
+
+      <div className="text-gray-400 text-base text-right">
+        last updated: 22/4/22
+      </div>
     </>
   );
 };
