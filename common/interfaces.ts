@@ -6,3 +6,8 @@ export interface IWork {
   date_left: string;
   details: string[];
 }
+
+export interface IIcons {
+  imgLink: string;
+  name: string;
+}

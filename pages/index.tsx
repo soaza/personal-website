@@ -46,9 +46,9 @@ const Home: NextPage = () => {
         id="section-0"
         className="min-h-screen p-12 flex justify-center items-center"
       >
-        <Fade bottom>
-          <About />
-        </Fade>
+        {/* <Fade bottom> */}
+        <About />
+        {/* </Fade> */}
       </div>
 
       <div className="flex justify-center">

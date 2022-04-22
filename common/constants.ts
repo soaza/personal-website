@@ -1,4 +1,4 @@
-import { IWork } from "./interfaces";
+import { IIcons, IWork } from "./interfaces";
 
 export const WORK_EXPERIENCES: IWork[] = [
   {
@@ -23,5 +23,13 @@ export const WORK_EXPERIENCES: IWork[] = [
       "• Built Workflow, a ticketing system for Designers similar to the Jira software",
       "• Integrated web application with back-end endpoints to increase productivity and efficiency of over 1000 designers in Shopee.",
     ],
+  },
+];
+
+export const ICONS_MAP: IIcons[] = [
+  {
+    name: "React",
+    imgLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
 ];

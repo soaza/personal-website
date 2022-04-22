@@ -1,5 +1,6 @@
 import React from "react";
 import { IWork } from "../common/interfaces";
+import { TechIcon } from "./TechIcon";
 
 export const WorkExperience = (props: { work: IWork }) => {
   const { work } = props;
@@ -29,16 +30,12 @@ export const WorkExperience = (props: { work: IWork }) => {
             );
           })}
         </>
-
-        {/* <div className="mb-2">
-            • Working on internal chat app to boost the productivity of over
-            4000 Binancians.
-          </div>
-          <div>
-            • Smoothened image viewing capabilities by integrating features to
-            zoom,rotate and share images in different chats.
-          </div> */}
       </div>
+
+      <TechIcon
+        name="React"
+        imgLink="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      />
     </div>
   );
 };
