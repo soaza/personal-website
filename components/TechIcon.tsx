@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { IIcons } from "../common/interfaces";
+import { ICONS_MAP } from "../common/constants";
 
-export const TechIcon = (props: IIcons) => {
-  const { imgLink, name } = props;
+export const TechIcon = (props: { name: string }) => {
+  const { name } = props;
+
+  const imgLink = ICONS_MAP.find((icon) => icon.name == name)?.imgLink;
 
   const [hovered, setHovered] = useState(false);
 
@@ -10,9 +12,9 @@ export const TechIcon = (props: IIcons) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className=" flex flex-col col-span-1 justify-center"
+      className=" justify-center w-max flex flex-col self-center"
     >
-      <img className=" place-self-center w-12 h-12" src={imgLink} />
+      <img className="place-self-center w-12 h-12" src={imgLink} />
 
       <p
         className={`text-center text-gray-400 ${

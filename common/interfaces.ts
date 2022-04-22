@@ -5,6 +5,7 @@ export interface IWork {
   date_joined: string;
   date_left: string;
   details: string[];
+  tech_stack: string[];
 }
 
 export interface IIcons {

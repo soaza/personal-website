@@ -2,6 +2,24 @@ import { IIcons, IWork } from "./interfaces";
 
 export const WORK_EXPERIENCES: IWork[] = [
   {
+    company_name: "National University of Singapore",
+    company_image: "/images/company-logos/binance.png",
+    role: "Freelance Full-Stack Developer",
+    date_joined: "Feb 2022",
+    date_left: "Present",
+    details: [
+      "• Built a static-generating research portfolio page as well as a Content Management System for NUS Computing researchers to showcase their research.",
+    ],
+    tech_stack: [
+      "Typescript",
+      "React",
+      "NextJS",
+      "ExpressJS",
+      "NodeJS",
+      "SQLite",
+    ],
+  },
+  {
     company_name: "Binance",
     company_image: "/images/company-logos/binance.png",
     role: "Software Engineer Intern",
@@ -11,6 +29,7 @@ export const WORK_EXPERIENCES: IWork[] = [
       "• Working on internal chat app to boost the productivity of over 4000 Binancians.",
       "• Smoothened image viewing capabilities by integrating features to zoom,rotate and share images in different chats.",
     ],
+    tech_stack: ["Typescript", "React", "Redux", "Electron"],
   },
 
   {
@@ -23,6 +42,7 @@ export const WORK_EXPERIENCES: IWork[] = [
       "• Built Workflow, a ticketing system for Designers similar to the Jira software",
       "• Integrated web application with back-end endpoints to increase productivity and efficiency of over 1000 designers in Shopee.",
     ],
+    tech_stack: ["Typescript", "React", "Redux"],
   },
 ];
 
@@ -43,7 +63,7 @@ export const ICONS_MAP: IIcons[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   },
   {
-    name: "Next.JS",
+    name: "NextJS",
     imgLink:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
   },

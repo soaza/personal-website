@@ -6,12 +6,12 @@ export const Section = (props: { sectionData: any }) => {
   const [showContent, setShowContent] = useState(false);
 
   return (
-    <div>
+    <div className="w-full lg:px-80">
       <div className="text-black text-6xl font-extrabold text-center select-none">
         {sectionData.title}
       </div>
 
-      <div className={` lg:px-32 mt-2`}>
+      <div className={` mt-2`}>
         <div className=" text-center lg:text-right text-xl text-gray-400  ">
           <Fade right> {sectionData.subtitle}</Fade>
         </div>
