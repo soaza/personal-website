@@ -1,4 +1,19 @@
+import { Projects } from "../components/Projects";
+import { Works } from "../components/Works";
 import { IIcons, IWork } from "./interfaces";
+
+export const SECTIONS = [
+  {
+    title: "work experience",
+    subtitle: "associations i have worked with.",
+    child: <Works />,
+  },
+  {
+    title: "projects",
+    subtitle: "personal projects I have worked on.",
+    child: <Projects />,
+  },
+];
 
 export const WORK_EXPERIENCES: IWork[] = [
   {

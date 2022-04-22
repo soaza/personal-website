@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Border } from "./Border";
 const Fade = require("react-reveal/Fade");
 
 export const Section = (props: { sectionData: any }) => {
@@ -18,9 +19,7 @@ export const Section = (props: { sectionData: any }) => {
 
         <Fade bottom>{sectionData.child}</Fade>
 
-        <div className="mt-12 flex justify-center">
-          <div className="border w-1/2" />
-        </div>
+        <Border />
       </div>
     </div>
   );

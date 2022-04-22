@@ -12,7 +12,7 @@ export const TechIcon = (props: { name: string }) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className=" justify-center w-max flex flex-col self-center"
+      className=" justify-center w-max flex flex-col place-self-center"
     >
       <img className="place-self-center w-12 h-12" src={imgLink} />
 
