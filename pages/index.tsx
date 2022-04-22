@@ -8,7 +8,7 @@ import Scrollspy from "react-scrollspy";
 const SECTIONS = [
   {
     title: "work experience",
-    subtitle: "companies i have worked with.",
+    subtitle: "associations i have worked with.",
     child: <Works />,
   },
   {
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           <div
             key={index}
             id={`section-${index + 1}`}
-            className="min-h-screen p-12 flex justify-center items-center"
+            className="min-h-screen p-12 flex justify-center "
           >
             <Section sectionData={sectionData} />
 

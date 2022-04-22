@@ -17,7 +17,7 @@ export const WorkExperience = (props: { work: IWork }) => {
         </div>
 
         <div className="mt-4 flex justify-center">
-          <img className=" h-24 w-24 object-contain" src={work.company_image} />
+          <img className=" h-24 w-80 object-contain" src={work.company_image} />
         </div>
       </div>
 

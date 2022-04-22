@@ -6,7 +6,7 @@ export const Section = (props: { sectionData: any }) => {
   const [showContent, setShowContent] = useState(false);
 
   return (
-    <div className="w-full lg:px-80">
+    <div className="w-full lg:px-48">
       <div className="text-black text-6xl font-extrabold text-center select-none">
         {sectionData.title}
       </div>
