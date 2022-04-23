@@ -9,7 +9,7 @@ export const ScrollDetector = () => {
       currentClassName="text-gray-400 "
     >
       <li>
-        <a href="#section-0">it's me</a>
+        <a href="#section-0">{"it's me"}</a>
       </li>
       <li>
         <a href="#section-1">work experience</a>
