@@ -13,7 +13,7 @@ export const WorkExperience = (props: { work: IWork }) => {
             {work.date_joined} - {work.date_left}
           </div>
 
-          <div className="text-3xl lg:text-3xl cursor-pointer hover:underline mb-2 font-extrabold">
+          <div className="text-3xl lg:text-3xl mb-2 font-extrabold">
             {work.company_name}
           </div>
           <div className="text-xl text-gray-400">{work.role}</div>

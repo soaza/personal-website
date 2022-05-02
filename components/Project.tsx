@@ -1,29 +1,45 @@
 import React from "react";
 import { ICONS_MAP } from "../common/constants";
+import { IProject } from "../common/interfaces";
 import { TechIcon } from "./TechIcon";
 
-export const Project = () => {
+export const Project = (props: { project: IProject }) => {
+  const { project } = props;
+
   return (
-    <div className="mt-5">
+    <div className="mt-12">
       <div className="flex justify-center mb-5">
-        <img className="w-full" src={"/images/project-images/moave.png"} />
+        <img className=" w-full" src={project.project_image} />
       </div>
 
-      <div className="text-xl text-gray-400 italic">
-        {"Aug 2021"} - {"Nov 2021"}
+      <div className="text-xl text-gray-400 italic mb-4">
+        {project.start_date} - {project.end_date}
       </div>
 
-      <div className="text-3xl cursor-pointer hover:underline font-extrabold mb-4">
-        Moave
-      </div>
+      <div className="text-3xl font-extrabold mb-4">{project.project_name}</div>
 
-      <div className="text-md lg:text-xl mb-4">
-        Website | <span className=" font-[consolas]">{"<code/>"}</span>
-      </div>
+      {project.website_link && (
+        <div className="text-md lg:text-xl mb-4">
+          <a
+            target="_blank"
+            href={project.website_link}
+            className="hover:underline"
+          >
+            Website
+          </a>{" "}
+          |{" "}
+          <a
+            target="_blank"
+            href={project.codebase_link}
+            className="hover:underline font-[consolas]"
+          >
+            {"<code/>"}
+          </a>
+        </div>
+      )}
 
       <div className="text-md lg:text-xl max-w-5xl mb-4">
-        A movie-centred social media platform for like-minded individuals to
-        connect over their taste of movies.
+        {project.project_detail}
       </div>
 
       <div
@@ -34,8 +50,8 @@ export const Project = () => {
         }}
         className=" grid lg:grid-flow-col gap-2 items-center lg:max-w-max "
       >
-        {ICONS_MAP.slice(0, 5).map((stack, index) => {
-          return <TechIcon key={index} name={stack.name} />;
+        {project.tech_stack.map((stack, index) => {
+          return <TechIcon key={index} name={stack} />;
         })}
       </div>
     </div>

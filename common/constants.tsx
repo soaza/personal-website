@@ -1,6 +1,6 @@
 import { Projects } from "../components/Projects";
 import { Works } from "../components/Works";
-import { IIcons, IWork } from "./interfaces";
+import { IIcons, IProject, IWork } from "./interfaces";
 
 export const SECTIONS = [
   {
@@ -152,5 +152,47 @@ export const ICONS_MAP: IIcons[] = [
     name: "ExpressJS",
     imgLink:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg",
+  },
+];
+
+export const PROJECTS: IProject[] = [
+  {
+    project_name: "Mangareader",
+    project_detail:
+      "A mock manga-reader built using data scraped from multiple online manga reader sources. Scraping done using BeautifulSoup library.",
+    project_image: "/images/project-images/mangareader.png",
+    start_date: "Apr 2022",
+    end_date: "Apr 2022",
+    tech_stack: ["Typescript", "React", "Flask", "Python"],
+  },
+  {
+    project_name: "Moave",
+    project_detail:
+      "A movie-centred social media platform for like-minded individuals to connect over their taste of movies.",
+    project_image: "/images/project-images/moave.png",
+    start_date: "Aug 2021",
+    end_date: "Nov 2021",
+    website_link: "https://moave-frontend.herokuapp.com/",
+    codebase_link: "https://github.com/soaza/moave",
+    tech_stack: [
+      "Typescript",
+      "React",
+      "Redux",
+      "NodeJS",
+      "ExpressJS",
+      "PostgreSQL",
+      "Flask",
+    ],
+  },
+  {
+    project_name: "NUS Pawfriends Official Website",
+    project_detail:
+      "Pawfriends is a website built for NUS Pawfriends. Utilised Ant Design UI as the main UI framework, with images hosted on Amazon S3, with ExpressJS and NodeJS as the back-end and PostgresSQL to store data. Also built a Content Management System for non-coders to edit data.",
+    project_image: "/images/project-images/pawfriends.png",
+    start_date: "May 2021",
+    end_date: "July 2021",
+    website_link: "https://nuspawfriends.com",
+    codebase_link: "https://github.com/soaza/pawfriends",
+    tech_stack: ["Typescript", "React", "NodeJS", "ExpressJS", "PostgreSQL"],
   },
 ];

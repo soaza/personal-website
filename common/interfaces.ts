@@ -8,6 +8,17 @@ export interface IWork {
   tech_stack: string[];
 }
 
+export interface IProject {
+  project_name: string;
+  project_detail: string;
+  project_image: string;
+  start_date: string;
+  end_date: string;
+  website_link?: string;
+  codebase_link?: string;
+  tech_stack: string[];
+}
+
 export interface IIcons {
   imgLink: string;
   name: string;
