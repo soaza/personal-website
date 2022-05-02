@@ -5,6 +5,7 @@ import { SECTIONS } from "../common/constants";
 import { ScrollDetector } from "../components/ScrollDetector";
 import { Border } from "../components/Border";
 import Head from "next/head";
+import { ScrollToTop } from "../components/ScrollToTop";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <ScrollDetector />
+      <ScrollToTop />
 
       <About />
 
