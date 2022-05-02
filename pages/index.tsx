@@ -25,14 +25,14 @@ const Home: NextPage = () => {
           <div
             key={index}
             id={`section-${index + 1}`}
-            className="min-h-screen p-6 lg:p-12 flex justify-center "
+            className="min-h-screen p-6 lg:p-12 flex justify-center dark:bg-black dark:text-white "
           >
             <Section sectionData={sectionData} />
           </div>
         );
       })}
 
-      <div className="text-gray-400 text-base text-right">
+      <div className="text-gray-400 text-base text-right dark:bg-black">
         last updated: 22/4/22
       </div>
     </>

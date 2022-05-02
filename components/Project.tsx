@@ -1,10 +1,11 @@
 import React from "react";
 import { ICONS_MAP } from "../common/constants";
 import { IProject } from "../common/interfaces";
+import { Border } from "./Border";
 import { TechIcon } from "./TechIcon";
 
-export const Project = (props: { project: IProject }) => {
-  const { project } = props;
+export const Project = (props: { project: IProject; isLast: boolean }) => {
+  const { project, isLast } = props;
 
   return (
     <div className="mt-12">
@@ -46,14 +47,15 @@ export const Project = (props: { project: IProject }) => {
         style={{
           gridAutoColumns: "1fr",
           gridTemplateColumns: "repeat(auto-fill, minmax(75px, max-content))",
-          width: "100%",
         }}
-        className=" grid lg:grid-flow-col gap-2 items-center lg:max-w-max "
+        className=" p-4 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-white dark:rounded-lg mb-12 "
       >
         {project.tech_stack.map((stack, index) => {
           return <TechIcon key={index} name={stack} />;
         })}
       </div>
+
+      {!isLast && <Border />}
     </div>
   );
 };

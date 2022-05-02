@@ -14,7 +14,7 @@ export const TechIcon = (props: { name: string }) => {
       onMouseLeave={() => setHovered(false)}
       className=" justify-center w-max flex flex-col place-self-center"
     >
-      <img className="place-self-center w-12 h-12" src={imgLink} />
+      <img className="place-self-center w-12 h-12 " src={imgLink} />
 
       <p
         className={`text-center text-gray-400 ${

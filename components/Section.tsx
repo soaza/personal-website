@@ -6,8 +6,8 @@ export const Section = (props: { sectionData: any }) => {
   const { sectionData } = props;
 
   return (
-    <div className="w-full xl:px-64 2xl:px-96">
-      <div className="text-black text-6xl font-extrabold text-center select-none">
+    <div className="w-full xl:px-64 2xl:px-96 ">
+      <div className="text-6xl font-extrabold text-center">
         {sectionData.title}
       </div>
 

@@ -4,7 +4,7 @@ export const About = () => {
   return (
     <div
       id="section-0"
-      className="p-12 text-center h-screen flex justify-center items-center"
+      className="p-12 text-center h-screen flex justify-center items-center  dark:bg-slate-900 dark:text-white"
     >
       <span>
         <div className="text-8xl font-black select-none">Kim Guan</div>
