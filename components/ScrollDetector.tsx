@@ -18,7 +18,7 @@ export const ScrollDetector = () => {
         <a href="#section-2">projects</a>
       </li>
       <li>
-        <a href="#section-3">contact me</a>
+        <a href="#section-3">blog</a>
       </li>
     </Scrollspy>
   );

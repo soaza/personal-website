@@ -1,3 +1,4 @@
+import { Blog } from "../components/Blog";
 import { Projects } from "../components/Projects";
 import { Works } from "../components/Works";
 import { IIcons, IProject, IWork } from "./interfaces";
@@ -12,6 +13,11 @@ export const SECTIONS = [
     title: "projects",
     subtitle: "personal projects I have worked on.",
     child: <Projects />,
+  },
+  {
+    title: "blog",
+    subtitle: "i write stuff sometimes.",
+    child: <Blog />,
   },
 ];
 

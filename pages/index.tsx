@@ -34,8 +34,8 @@ const Home: NextPage = () => {
         );
       })}
 
-      <div className="text-gray-400 text-base text-right dark:bg-black">
-        last updated: 22/4/22
+      <div className="p-4 italic text-gray-400 text-base text-left dark:bg-slate-900">
+        last updated: 2/5/22
       </div>
     </>
   );

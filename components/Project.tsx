@@ -48,7 +48,7 @@ export const Project = (props: { project: IProject; isLast: boolean }) => {
           gridAutoColumns: "1fr",
           gridTemplateColumns: "repeat(auto-fill, minmax(75px, max-content))",
         }}
-        className="mb-12 p-4 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
+        className="mb-12 p-2 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
       >
         {project.tech_stack.map((stack, index) => {
           return <TechIcon key={index} name={stack} />;

@@ -23,3 +23,10 @@ export interface IIcons {
   imgLink: string;
   name: string;
 }
+
+export interface IBlog {
+  blog_title: string;
+  blog_link: string;
+  blog_date: string;
+  blog_readtime: number;
+}
