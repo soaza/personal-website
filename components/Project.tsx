@@ -23,6 +23,7 @@ export const Project = (props: { project: IProject; isLast: boolean }) => {
         <div className="text-md lg:text-xl mb-4">
           <a
             target="_blank"
+            rel="noreferrer"
             href={project.website_link}
             className="hover:underline"
           >
@@ -31,6 +32,7 @@ export const Project = (props: { project: IProject; isLast: boolean }) => {
           |{" "}
           <a
             target="_blank"
+            rel="noreferrer"
             href={project.codebase_link}
             className="hover:underline font-[consolas]"
           >
