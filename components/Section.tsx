@@ -18,7 +18,6 @@ export const Section = (props: { sectionData: any }) => {
 
         <Fade bottom>{sectionData.child}</Fade>
       </div>
-      <Border />
     </div>
   );
 };

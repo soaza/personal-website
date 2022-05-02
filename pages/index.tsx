@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
       <About />
 
-      <Border />
+      {/* <Border /> */}
 
       {SECTIONS.map((sectionData, index) => {
         return (
