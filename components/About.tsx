@@ -8,6 +8,11 @@ export const About = () => {
       <div
         id="section-0"
         className=" p-12 text-center h-screen flex justify-center items-center  dark:bg-slate-900 dark:text-white"
+        style={{
+          WebkitTransition: "background-color 500ms linear",
+          msTransition: "background-color 500ms linear",
+          transition: "background-color 500ms linear",
+        }}
       >
         <span>
           <div className="text-8xl font-black select-none">Kim Guan</div>
