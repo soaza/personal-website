@@ -41,7 +41,7 @@ export const WorkExperience = (props: { work: IWork }) => {
           gridAutoColumns: "1fr",
           gridTemplateColumns: "repeat(auto-fill, minmax(75px, max-content))",
         }}
-        className=" p-4 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
+        className=" p-2 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
       >
         {work.tech_stack.map((stack, index) => {
           return <TechIcon key={index} name={stack} />;
