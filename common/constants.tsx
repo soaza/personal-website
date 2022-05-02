@@ -18,7 +18,7 @@ export const SECTIONS = [
 export const WORK_EXPERIENCES: IWork[] = [
   {
     company_name: "National University of Singapore",
-    company_image: "/images/company-logos/nus.png",
+    company_image: "/images/company-logos/nus.jpeg",
     role: "Freelance Full-Stack Developer",
     date_joined: "Feb 2022",
     date_left: "Present",

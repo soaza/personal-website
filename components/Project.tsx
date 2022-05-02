@@ -10,7 +10,7 @@ export const Project = (props: { project: IProject; isLast: boolean }) => {
   return (
     <div className="mt-12">
       <div className="flex justify-center mb-5">
-        <img className=" w-full" src={project.project_image} />
+        <img className="max-h-[500px] w-full" src={project.project_image} />
       </div>
 
       <div className="text-xl text-gray-400 italic mb-4">
@@ -48,7 +48,7 @@ export const Project = (props: { project: IProject; isLast: boolean }) => {
           gridAutoColumns: "1fr",
           gridTemplateColumns: "repeat(auto-fill, minmax(75px, max-content))",
         }}
-        className=" p-4 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-white dark:rounded-lg mb-12 "
+        className="mb-12 p-4 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
       >
         {project.tech_stack.map((stack, index) => {
           return <TechIcon key={index} name={stack} />;

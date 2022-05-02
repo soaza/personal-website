@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           <div
             key={index}
             id={`section-${index + 1}`}
-            className="min-h-screen p-6 lg:p-12 flex justify-center dark:bg-black dark:text-white "
+            className="min-h-screen p-6 lg:p-12 flex justify-center dark:bg-slate-900 dark:text-white "
           >
             <Section sectionData={sectionData} />
           </div>

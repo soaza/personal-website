@@ -17,7 +17,7 @@ export const TechIcon = (props: { name: string }) => {
       <img className="place-self-center w-12 h-12 " src={imgLink} />
 
       <p
-        className={`text-center text-gray-400 ${
+        className={`dark:text-gray-400 text-center dark:opacity-100 text-gray-400 ${
           hovered ? "opacity-100" : "opacity-0"
         }`}
       >

@@ -4,7 +4,6 @@ import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    localStorage.theme = "dark";
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
