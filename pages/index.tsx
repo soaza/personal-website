@@ -6,6 +6,7 @@ import { ScrollDetector } from "../components/ScrollDetector";
 import { Border } from "../components/Border";
 import Head from "next/head";
 import { ScrollToTop } from "../components/ScrollToTop";
+import { Footer } from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -27,16 +28,14 @@ const Home: NextPage = () => {
           <div
             key={index}
             id={`section-${index + 1}`}
-            className="min-h-screen p-6 lg:p-12 flex justify-center dark:bg-slate-900 dark:text-white "
+            className=" p-6 lg:p-12 flex justify-center dark:bg-slate-900 dark:text-white "
           >
             <Section sectionData={sectionData} />
           </div>
         );
       })}
 
-      <div className="p-4 italic text-gray-400 text-base text-left dark:bg-slate-900">
-        last updated: 2/5/22
-      </div>
+      <Footer />
     </>
   );
 };

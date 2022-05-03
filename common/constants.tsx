@@ -76,6 +76,32 @@ export const WORK_EXPERIENCES: IWork[] = [
     ],
     tech_stack: ["Typescript", "React", "Redux"],
   },
+
+  {
+    company_name: "WorkClass",
+    company_image: "/images/company-logos/workclass.svg",
+    role: "Full-Stack Developer Intern",
+    date_joined: "Jan 2021",
+    date_left: "Jul 2021",
+    details: [
+      "• Maintained and improved upon the front-end and back-end features of 5 core web applications used in production by over 60,000 users daily.",
+      "• Automated emailing system using Mailchimp API,integrating multi-processing using Python’s internal library to reduce script run-time by 10 times.",
+    ],
+    tech_stack: ["Typescript", "React", "Redux", "Django", "MySQL", "Python"],
+  },
+
+  {
+    company_name: "NTUC Income",
+    company_image: "/images/company-logos/ntuc-income.jpeg",
+    role: "Back-End Developer Intern",
+    date_joined: "May 2020",
+    date_left: "Jul 2020",
+    details: [
+      "• Responsible for data mining logs from Kibana and writing my own python scripts to present the data in a CSV format for better readability.",
+      "• Provided backend integration with Kibana using Flask framework.",
+    ],
+    tech_stack: ["Python"],
+  },
 ];
 
 export const ICONS_MAP: IIcons[] = [
