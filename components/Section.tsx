@@ -16,7 +16,8 @@ export const Section = (props: { sectionData: any }) => {
           <Fade right> {sectionData.subtitle}</Fade>
         </div>
 
-        <Fade bottom>{sectionData.child}</Fade>
+        {/* <Fade bottom >{sectionData.child}</Fade> */}
+        {sectionData.child}
       </div>
     </div>
   );
