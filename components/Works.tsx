@@ -8,7 +8,7 @@ export const Works = () => {
     <>
       {WORK_EXPERIENCES.map((work, index) => {
         return (
-          <Fade bottom>
+          <Fade key={index} bottom>
             <WorkExperience key={index} work={work} />
           </Fade>
         );
