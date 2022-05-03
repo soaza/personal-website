@@ -36,17 +36,19 @@ export const WorkExperience = (props: { work: IWork }) => {
         </>
       </div>
 
-      <div
-        style={{
-          gridAutoColumns: "1fr",
-          gridTemplateColumns: "repeat(auto-fill, minmax(75px, max-content))",
-        }}
-        className=" p-2 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
-      >
-        {work.tech_stack.map((stack, index) => {
-          return <TechIcon key={index} name={stack} />;
-        })}
-      </div>
+      {work.tech_stack && (
+        <div
+          style={{
+            gridAutoColumns: "1fr",
+            gridTemplateColumns: "repeat(auto-fill, minmax(75px, max-content))",
+          }}
+          className=" p-2 grid lg:grid-flow-col gap-2 items-center w-[90vw] lg:w-full dark:bg-slate-600 dark:rounded-lg "
+        >
+          {work.tech_stack?.map((stack, index) => {
+            return <TechIcon key={index} name={stack} />;
+          })}
+        </div>
+      )}
     </div>
   );
 };

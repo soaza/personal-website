@@ -23,6 +23,22 @@ export const SECTIONS = [
 
 export const WORK_EXPERIENCES: IWork[] = [
   {
+    company_name: "Bytedance",
+    company_image: "/images/company-logos/bytedance.png",
+    role: "Frontend Engineer Intern",
+    date_joined: "May 2022",
+    date_left: "Present",
+    details: ["• TBC"],
+    // tech_stack: [
+    //   "Typescript",
+    //   "React",
+    //   "NextJS",
+    //   "ExpressJS",
+    //   "NodeJS",
+    //   "SQLite",
+    // ],
+  },
+  {
     company_name: "National University of Singapore",
     company_image: "/images/company-logos/nus.jpeg",
     role: "Freelance Full-Stack Developer",
