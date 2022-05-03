@@ -7,7 +7,7 @@ export const Projects = () => {
     <>
       {PROJECTS.map((project, index) => {
         return (
-          <Fade bottom>
+          <Fade key={index} bottom>
             <Project
               key={index}
               project={project}
