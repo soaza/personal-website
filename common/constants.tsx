@@ -28,15 +28,12 @@ export const WORK_EXPERIENCES: IWork[] = [
     role: "Frontend Engineer Intern",
     date_joined: "May 2022",
     date_left: "Present",
-    details: ["• TBC"],
-    // tech_stack: [
-    //   "Typescript",
-    //   "React",
-    //   "NextJS",
-    //   "ExpressJS",
-    //   "NodeJS",
-    //   "SQLite",
-    // ],
+    details: [
+      "● Working with the Global Payments teams to build payment infrastructures.",
+      "● Integrated PAYCELL payment method to Bytedance’s internal payment system using One-Time-Password verification,increasing the outreach of the payment system to more than 6 million users in Turkey.",
+      "● Prevented cross-site-scripting(XSS) by building script prevention functions on the front-end, ensuring safety for thousands of users.",
+    ],
+    tech_stack: ["Typescript", "React", "ExpressJS", "NodeJS"],
   },
   {
     company_name: "National University of Singapore",
