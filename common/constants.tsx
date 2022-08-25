@@ -31,7 +31,7 @@ export const WORK_EXPERIENCES: IWork[] = [
     details: [
       "● Working with the Global Payments teams to build payment infrastructures.",
       "● Integrated PAYCELL payment method to Bytedance’s internal payment system using One-Time-Password verification,increasing the outreach of the payment system to more than 6 million users in Turkey.",
-      "● Prevented cross-site-scripting(XSS) by building script prevention functions on the front-end, ensuring safety for thousands of users.",
+      "● Built an internal Robot to troubleshoot Oncall problems and reduce workload of Oncall personnel, increasing efficiency and reducing workload of the Oncall team.",
     ],
     tech_stack: ["Typescript", "React", "ExpressJS", "NodeJS"],
   },
@@ -60,9 +60,18 @@ export const WORK_EXPERIENCES: IWork[] = [
     date_joined: "Aug 2021",
     date_left: "Present",
     details: [
-      "• Led and built the front-end of a platform for promoting mental well-being for social good",
+      "• Led a team of 4 developers and performed code reviews on a weekly basis to ensure code quality",
+      "• Built the front-end of a e-learning platform for promoting mental well-being for social good",
+      "• Designed,built the back-end and set up migrations and seeding infrastructure to smoothen the workflow of developers.",
     ],
-    tech_stack: ["Typescript", "React", "Redux", "MaterialUI"],
+    tech_stack: [
+      "Typescript",
+      "React",
+      "Redux",
+      "MaterialUI",
+      "NodeJS",
+      "ExpressJS",
+    ],
   },
   {
     company_name: "Binance",
@@ -134,6 +143,11 @@ export const ICONS_MAP: IIcons[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   },
   {
+    name: "Supabase",
+    imgLink:
+      "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png",
+  },
+  {
     name: "NextJS",
     imgLink:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
@@ -201,6 +215,22 @@ export const ICONS_MAP: IIcons[] = [
 ];
 
 export const PROJECTS: IProject[] = [
+  {
+    project_name: "NUS Reviews",
+    project_detail:
+      "Built a module review platform for NUS students to gain better insight into module planning by sourcing reviews from the community. The platform attracted the attention of over 1000 students and over 300 reviews added on the first day of launch, currently an open-source project.",
+    project_image: "/images/project-images/nus-reviews.png",
+    start_date: "Jun 2022",
+    end_date: "Present",
+    tech_stack: [
+      "Typescript",
+      "React",
+      "NextJS",
+      "PostgreSQL",
+      "Tailwind",
+      "Supabase",
+    ],
+  },
   {
     project_name: "Mangareader",
     project_detail:
