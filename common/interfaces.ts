@@ -16,12 +16,31 @@ export interface IProject {
   end_date: string;
   website_link?: string;
   codebase_link?: string;
-  tech_stack: string[];
+  tech_stack: TTechStack[];
 }
+
+type TTechStack =
+  | "React"
+  | "Electron"
+  | "Tailwind"
+  | "Supabase"
+  | "NextJS"
+  | "SQLite"
+  | "MaterialUI"
+  | "Redux"
+  | "GraphQL"
+  | "Django"
+  | "Flask"
+  | "MySQL"
+  | "PostgreSQL"
+  | "Typescript"
+  | "Python"
+  | "NodeJS"
+  | "ExpressJS";
 
 export interface IIcons {
   imgLink: string;
-  name: string;
+  name: TTechStack;
 }
 
 export interface IBlog {
