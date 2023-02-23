@@ -15,8 +15,8 @@ export const About = () => {
         }}
       >
         <span>
-          <div className="text-8xl font-black select-none">Kim Guan</div>
-          <div className="text-gray-400 text-center text-xl font-semibold">
+          <div className="text-8xl font-bold select-none">Kim Guan</div>
+          <div className="text-gray-400 text-center text-xl font-light">
             i build websites.
           </div>
         </span>
