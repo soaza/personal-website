@@ -30,6 +30,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         href="http://fonts.cdnfonts.com/css/cerebri-sans"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+        rel="stylesheet"
+      />
 
       <Component {...pageProps} />
     </>
