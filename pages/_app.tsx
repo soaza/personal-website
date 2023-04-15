@@ -1,8 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { refetchOnWindowFocus: false } },
+  });
+
   useEffect(() => {
     if (
       localStorage.theme === "dark" ||
@@ -39,7 +44,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         rel="stylesheet"
       />
 
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
     </>
   );
 }
