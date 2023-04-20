@@ -17,7 +17,6 @@ export const OpeningAnimation = (props: {
     animate: showLogo
       ? { pathLength: 1, pathOffset: 0 }
       : { pathLength: 1, pathOffset: 1 },
-    // exit: { pathLength: 1, pathOffset: 1 },
     transition: {
       duration: 1,
       ease: "easeInOut",
@@ -26,7 +25,12 @@ export const OpeningAnimation = (props: {
   };
 
   return (
-    <div className="stroke-blue-400 flex flex-col align-middle items-center fixed">
+    <div
+      style={{
+        transform: "translate(-50%, -50%)",
+      }}
+      className="stroke-blue-400 flex flex-col align-middle items-center fixed  -mr-[50%] left-1/2 top-1/2"
+    >
       <AnimatePresence>
         <motion.svg
           className={"w-24"}
