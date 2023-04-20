@@ -29,7 +29,7 @@ export const OpeningAnimation = (props: {
       style={{
         transform: "translate(-50%, -50%)",
       }}
-      className="stroke-blue-400 flex flex-col align-middle items-center fixed  -mr-[50%] left-1/2 top-1/2"
+      className="stroke-black flex flex-col align-middle items-center fixed  -mr-[50%] left-1/2 top-1/2"
     >
       <AnimatePresence>
         <motion.svg
@@ -48,7 +48,7 @@ export const OpeningAnimation = (props: {
           animate="visible"
           transition={{ duration: 1 }}
         >
-          <div className=" text-blue-400 text-4xl"> Kim Guan</div>
+          <div className=" font-bold text-4xl"> Kim Guan</div>
         </motion.div>
       </AnimatePresence>
     </div>
