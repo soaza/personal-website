@@ -25,13 +25,8 @@ export const HomePage = () => {
     },
   };
 
-  const boxVariant = {
-    hidden: { opacity: 0, x: -10 },
-    show: { opacity: 1, x: 0, transition: { type: "spring" } },
-  };
-
   return (
-    <div className="flex justify-center h-screen items-center ">
+    <div className="flex justify-center min-h-screen-plus-10  relative ">
       <OpeningAnimation showLogo={showLogo} setShowLogo={setShowLogo} />
 
       {!showLogo && (
@@ -39,12 +34,10 @@ export const HomePage = () => {
           variants={containerVariant}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-3 p-[10%] px-[20%] w-full h-full grid-rows-3 justify-center items-center gap-4"
+          className=" grid grid-cols-3 py-[5%] px-[5%] w-[60%]  grid-rows-3 justify-center items-center gap-4 "
         >
           {[...Array(8)].map((i) => (
-            <motion.div className="w-full h-full" variants={boxVariant}>
-              <Box key={i} />
-            </motion.div>
+            <Box key={i} />
           ))}
         </motion.div>
       )}
