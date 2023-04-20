@@ -8,11 +8,6 @@ import { OpeningAnimation } from "../components/OpeningAnimation";
 
 export const HomePage = () => {
   const [showLogo, setShowLogo] = useState(true);
-  const { data } = useQuery("todos", async () => {
-    const res = await axios.get("/api/spotify");
-    // console.log(res.data);
-    return res.data;
-  });
 
   const containerVariant = {
     hidden: { opacity: 0 },
@@ -34,10 +29,14 @@ export const HomePage = () => {
           variants={containerVariant}
           initial="hidden"
           animate="show"
-          className=" grid grid-cols-3 py-[5%] px-[5%] w-[60%]  grid-rows-3 justify-center items-center gap-4 "
+          className=" grid grid-cols-3 py-[5%] px-[5%] w-[65%]  grid-rows-3 justify-center items-center gap-4 "
         >
-          {[...Array(8)].map((i) => (
-            <Box key={i} />
+          <Box className=" bg-gray-700">
+            <SpotifyBox />
+          </Box>
+
+          {[...Array(8)].map((i, index) => (
+            <Box key={index} />
           ))}
         </motion.div>
       )}
