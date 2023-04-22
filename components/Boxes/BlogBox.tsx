@@ -12,7 +12,7 @@ export const BlogBox = () => {
         >
           Blog
         </a>
-        <div className="text-xl">I write stuff</div>
+        <div className="text-2xl">I write stuff</div>
       </div>
     </Box>
   );

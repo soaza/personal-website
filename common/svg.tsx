@@ -3,7 +3,7 @@ export const ShibaSVG = (props: any) => (
     {...props}
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1024.000000 1024.000000"
+    viewBox="0 0 1024 1024"
     preserveAspectRatio="xMidYMid meet"
   >
     <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
