@@ -21,7 +21,7 @@ export const HomePage = () => {
     if (!darkMode) {
       setBackgroundColor("bg-orange-100");
     } else {
-      setBackgroundColor("bg-slate-900");
+      setBackgroundColor("bg-slate-700");
     }
   }, [darkMode]);
 
