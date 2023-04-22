@@ -19,7 +19,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     if (!darkMode) {
-      setBackgroundColor("bg-orange-100");
+      setBackgroundColor("bg-orange-50");
     } else {
       setBackgroundColor("bg-slate-700");
     }
