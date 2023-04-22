@@ -20,21 +20,16 @@ export const IntroBox = () => {
   return (
     <Box className="lg:col-span-2 lg:aspect-[2] dark:bg-slate-600 text-black dark:text-white">
       <div className="flex flex-col">
-        <div className="text-2xl  ">
-          {" "}
+        <div className="text-2xl leading-tight">
           Hi I am <span className="font-bold text-3xl">Kim Guan</span> ! I am
           based in Singapore and enjoys building front-end! My primary stack
           consists of React, NextJS,Tailwind and Typescript.
         </div>
 
-        <div className="place-self-end w-[33%]">
-          <ShibaSVG fill={isDarkMode ? "white" : "black"} />
-          {/*
-          <div className="text-gray-600 text-right">
-            {" "}
-            Generated using DALL-E
-          </div> */}
-        </div>
+        <ShibaSVG
+          className="place-self-end w-[50%] lg:w-[25%] 2xl:w-[30%]"
+          fill={isDarkMode ? "white" : "black"}
+        />
       </div>
     </Box>
   );

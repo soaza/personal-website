@@ -21,10 +21,10 @@ export const ThemeBox = (props: {
 
   const DARK_COLORS = [
     "bg-slate-900",
-    "bg-red-900",
-    "bg-green-900",
-    "bg-yellow-900",
-    "bg-pink-900",
+    "bg-emerald-700",
+    "bg-teal-900",
+    "bg-cyan-900",
+    "bg-sky-900",
   ];
 
   return (

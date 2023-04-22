@@ -10,6 +10,7 @@ import { WorkBox } from "../components/Boxes/WorkBox";
 import { BlogBox } from "../components/Boxes/BlogBox";
 import { PhotoBox } from "../components/Boxes/PhotoBox";
 import { useTheme } from "../components/context/DarkModeProvider";
+import { MovieBox } from "../components/Boxes/MovieBox";
 
 export const HomePage = () => {
   const [showLogo, setShowLogo] = useState(true);
@@ -54,17 +55,20 @@ export const HomePage = () => {
           className=" grid lg:grid-cols-3 py-[5%] px-[5%] lg:w-[65%] w-full  lg:grid-rows-3 justify-center items-center gap-4 "
         >
           <IntroBox />
-          <SpotifyBox />
-
           <WorkBox />
+
+          <BlogBox />
+
           <ThemeBox
             setBackgroundColor={setBackgroundColor}
             backgroundColor={backgroundColor}
           />
+
           <ProjectBox />
 
-          <BlogBox />
-          <PhotoBox />
+          <MovieBox />
+          <SpotifyBox />
+          {/* <PhotoBox /> */}
 
           {[...Array(4)].map((i, index) => (
             <Box key={index} />
