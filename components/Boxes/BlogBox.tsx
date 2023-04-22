@@ -6,6 +6,7 @@ export const BlogBox = () => {
     <Box>
       <div className=" flex items-center flex-col justify-center h-full gap-4">
         <a
+          rel="noreferrer"
           target="_blank"
           href="https://kimguanified-blog.vercel.app/"
           className="text-5xl font-bold hover:underline"
