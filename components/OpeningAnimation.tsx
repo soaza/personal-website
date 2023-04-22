@@ -29,10 +29,11 @@ export const OpeningAnimation = (props: {
       style={{
         transform: "translate(-50%, -50%)",
       }}
-      className="stroke-black flex flex-col align-middle items-center fixed  -mr-[50%] left-1/2 top-1/2"
+      className="stroke-black dark:stroke-white flex flex-col align-middle items-center fixed  -mr-[50%] left-1/2 top-1/2"
     >
       <AnimatePresence>
         <motion.svg
+          key="logo"
           className={"w-24"}
           viewBox="0 0 24 24"
           preserveAspectRatio="xMidYMid meet"
@@ -43,12 +44,13 @@ export const OpeningAnimation = (props: {
         </motion.svg>
 
         <motion.div
+          key="name"
           variants={textVariants}
           initial="hidden"
           animate="visible"
           transition={{ duration: 1 }}
         >
-          <div className=" font-bold text-4xl"> Kim Guan</div>
+          <div className=" font-bold text-4xl dark:text-white"> Kim Guan</div>
         </motion.div>
       </AnimatePresence>
     </div>

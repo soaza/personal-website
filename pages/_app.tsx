@@ -1,24 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { useEffect } from "react";
+import { createContext, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ThemeProvider } from "../components/context/DarkModeProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient({
     defaultOptions: { queries: { refetchOnWindowFocus: false } },
   });
-
-  useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
 
   return (
     <>
@@ -45,7 +34,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
 
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </QueryClientProvider>
     </>
   );
