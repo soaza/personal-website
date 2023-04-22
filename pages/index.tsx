@@ -31,7 +31,7 @@ export const HomePage = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 1,
+        delayChildren: 1.0,
       },
     },
   };
