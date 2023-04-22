@@ -1,43 +1,81 @@
-import type { NextPage } from "next";
-import { About } from "../components/About";
-import { Section } from "../components/Section";
-import { SECTIONS } from "../common/constants";
-import { ScrollDetector } from "../components/ScrollDetector";
-import { Border } from "../components/Border";
-import Head from "next/head";
-import { ScrollToTop } from "../components/ScrollToTop";
-import { Footer } from "../components/Footer";
+import React, { useEffect, useState } from "react";
+import { SpotifyBox } from "../components/Boxes/SpotifyBox";
+import { motion } from "framer-motion";
+import { OpeningAnimation } from "../components/OpeningAnimation";
+import { IntroBox } from "../components/Boxes/IntroBox";
+import { ThemeBox } from "../components/Boxes/ThemeBox";
+import { ProjectBox } from "../components/Boxes/ProjectBox";
+import { WorkBox } from "../components/Boxes/WorkBox";
+import { BlogBox } from "../components/Boxes/BlogBox";
+import { PhotoBox } from "../components/Boxes/PhotoBox";
+import { useTheme } from "../components/context/DarkModeProvider";
+import { MovieBox } from "../components/Boxes/MovieBox";
+import Link from "next/link";
 
-const Home: NextPage = () => {
+export const HomePage = () => {
+  const [showLogo, setShowLogo] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState("bg-orange-100");
+  const { darkMode } = useTheme();
+
+  useEffect(() => {
+    if (!darkMode) {
+      setBackgroundColor("bg-orange-100");
+    } else {
+      setBackgroundColor("bg-slate-900");
+    }
+  }, [darkMode]);
+
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 1.0,
+      },
+    },
+  };
+
   return (
-    <>
-      <Head>
-        <title> {"Kim Guan | dev"}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+    <div
+      style={{
+        WebkitTransition: "background-color 500ms linear",
+        msTransition: "background-color 500ms linear",
+        transition: "background-color 500ms linear",
+      }}
+      className={`flex justify-center min-h-screen-plus-10 relative ${backgroundColor} dark:${backgroundColor} `}
+    >
+      <OpeningAnimation showLogo={showLogo} setShowLogo={setShowLogo} />
 
-      <ScrollDetector />
-      <ScrollToTop />
+      {!showLogo && (
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          animate="show"
+          className=" grid lg:grid-cols-3 py-[5%] px-[5%] lg:w-[65%] w-full  lg:grid-rows-3 justify-center items-center gap-4 "
+        >
+          <IntroBox />
+          <WorkBox />
 
-      <About />
+          <BlogBox />
 
-      {/* <Border /> */}
+          <ThemeBox
+            setBackgroundColor={setBackgroundColor}
+            backgroundColor={backgroundColor}
+          />
 
-      {SECTIONS.map((sectionData, index) => {
-        return (
-          <div
-            key={index}
-            id={`section-${index + 1}`}
-            className=" p-6 lg:p-12 flex justify-center dark:bg-slate-900 dark:text-white "
-          >
-            <Section sectionData={sectionData} />
+          <ProjectBox />
+
+          <MovieBox />
+          <SpotifyBox />
+
+          <div className="text-center lg:col-span-3 underline text-xl">
+            <Link href="/detailed">Detailed Version</Link>
           </div>
-        );
-      })}
-
-      <Footer />
-    </>
+        </motion.div>
+      )}
+    </div>
   );
 };
 
-export default Home;
+export default HomePage;

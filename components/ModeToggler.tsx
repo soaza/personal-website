@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import DarkModeToggle from "react-dark-mode-toggle";
+import { useTheme } from "./context/DarkModeProvider";
 
 export const ModeToggler = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  const { toggleDarkMode, darkMode } = useTheme();
 
   useEffect(() => {
-    localStorage.theme = isDarkMode ? "dark" : "light";
+    localStorage.theme = darkMode ? "dark" : "light";
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -15,11 +16,15 @@ export const ModeToggler = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [isDarkMode]);
+  }, [darkMode]);
 
   return (
-    <div className="absolute top-3 left-3">
-      <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={80} />
-    </div>
+    <DarkModeToggle
+      onChange={() => {
+        toggleDarkMode(!darkMode);
+      }}
+      checked={darkMode}
+      size={80}
+    />
   );
 };
