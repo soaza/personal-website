@@ -8,8 +8,8 @@ export const Box = (props: {
   const { className, children } = props;
 
   const boxVariant = {
-    hidden: { opacity: 0, x: -10 },
-    show: { opacity: 1, x: 0, transition: { type: "spring" } },
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
 
   return (
