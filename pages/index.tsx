@@ -69,7 +69,7 @@ export const HomePage = () => {
           <MovieBox />
           <SpotifyBox />
 
-          <div className="text-center lg:col-span-3 underline text-xl">
+          <div className="text-center dark:text-white lg:col-span-3 underline text-xl">
             <Link href="/detailed">Detailed Version</Link>
           </div>
         </motion.div>
