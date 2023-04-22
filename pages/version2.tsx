@@ -1,19 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box } from "../components/Box";
-import { useQuery } from "react-query";
-import axios from "axios";
 import { SpotifyBox } from "../components/Boxes/SpotifyBox";
 import { motion } from "framer-motion";
 import { OpeningAnimation } from "../components/OpeningAnimation";
 import { IntroBox } from "../components/Boxes/IntroBox";
-import { DarkModeBox } from "../components/Boxes/DarkModeBox";
+import { ThemeBox } from "../components/Boxes/ThemeBox";
 import { ProjectBox } from "../components/Boxes/ProjectBox";
 import { WorkBox } from "../components/Boxes/WorkBox";
 import { BlogBox } from "../components/Boxes/BlogBox";
 import { PhotoBox } from "../components/Boxes/PhotoBox";
+import { useTheme } from "../components/context/DarkModeProvider";
 
 export const HomePage = () => {
   const [showLogo, setShowLogo] = useState(true);
+  const [backgroundColor, setBackgroundColor] = useState("bg-orange-100");
+  const { darkMode } = useTheme();
+
+  useEffect(() => {
+    if (!darkMode) {
+      setBackgroundColor("bg-orange-100");
+    } else {
+      setBackgroundColor("bg-slate-900");
+    }
+  }, [darkMode]);
 
   const containerVariant = {
     hidden: { opacity: 0 },
@@ -33,7 +42,7 @@ export const HomePage = () => {
         msTransition: "background-color 500ms linear",
         transition: "background-color 500ms linear",
       }}
-      className="flex justify-center min-h-screen-plus-10 relative bg-orange-50 dark:bg-slate-800 "
+      className={`flex justify-center min-h-screen-plus-10 relative ${backgroundColor} dark:${backgroundColor} `}
     >
       <OpeningAnimation showLogo={showLogo} setShowLogo={setShowLogo} />
 
@@ -46,9 +55,14 @@ export const HomePage = () => {
         >
           <IntroBox />
           <SpotifyBox />
-          <ProjectBox />
-          <DarkModeBox />
+
           <WorkBox />
+          <ThemeBox
+            setBackgroundColor={setBackgroundColor}
+            backgroundColor={backgroundColor}
+          />
+          <ProjectBox />
+
           <BlogBox />
           <PhotoBox />
 
