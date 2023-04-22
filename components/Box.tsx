@@ -15,7 +15,7 @@ export const Box = (props: {
   return (
     <motion.div
       className={
-        "bg-white rounded-3xl p-4 dark:bg-slate-800 dark:border-gray-500 dark:border text-black dark:text-white aspect-square w-80 lg:w-full relative " +
+        "bg-white rounded-3xl p-4  dark:bg-slate-600 dark:border-gray-500 dark:border text-black dark:text-white aspect-square w-80 lg:w-full relative " +
         className
       }
       variants={boxVariant}
