@@ -17,6 +17,7 @@ export const ProjectBox = () => {
         <div className=" font-bold text-3xl">NUS Reviews</div>
 
         <a
+          rel="noreferrer"
           target="_blank"
           className="underline text-xl"
           href="https://nus-reviews.com"
