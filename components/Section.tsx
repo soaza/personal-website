@@ -1,6 +1,5 @@
 import React from "react";
 import { Border } from "./Border";
-const Fade = require("react-reveal/Fade");
 
 export const Section = (props: { sectionData: any }) => {
   const { sectionData } = props;
@@ -12,11 +11,8 @@ export const Section = (props: { sectionData: any }) => {
       </div>
 
       <div className={`mt-2 mb-5`}>
-        <div className=" text-center text-xl text-gray-400  ">
-          <Fade right> {sectionData.subtitle}</Fade>
-        </div>
+        <div className=" text-center text-xl text-gray-400  "></div>
 
-        {/* <Fade bottom >{sectionData.child}</Fade> */}
         {sectionData.child}
       </div>
     </div>
