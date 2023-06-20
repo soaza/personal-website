@@ -11,7 +11,6 @@ export const WorkBox = () => {
           Front-End Engineer at{" "}
           <span className="font-bold text-2xl">TikTok</span>
         </div>
-        (Incoming)
       </div>
     </Box>
   );
