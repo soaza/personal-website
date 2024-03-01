@@ -11,6 +11,7 @@ import { PhotoBox } from "../components/Boxes/PhotoBox";
 import { useTheme } from "../components/context/DarkModeProvider";
 import { MovieBox } from "../components/Boxes/MovieBox";
 import Link from "next/link";
+import { Box } from "../components/Box";
 
 export const HomePage = () => {
   const [showLogo, setShowLogo] = useState(true);
@@ -66,7 +67,11 @@ export const HomePage = () => {
 
           <ProjectBox />
 
-          <MovieBox />
+          {/* <MovieBox /> */}
+          <Box className=" text-gray-500 text-2xl items-center flex justify-center">
+            Coming Soon
+          </Box>
+
           <SpotifyBox />
 
           <div className="text-center dark:text-white lg:col-span-3 underline text-xl">

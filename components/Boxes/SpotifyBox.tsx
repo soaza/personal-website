@@ -21,7 +21,7 @@ export const SpotifyBox = () => {
         />
 
         <div className="text-white flex flex-col gap-2 h-full">
-          <div className="text-4xl 2xl:text-3xl font-bold ">
+          <div className="text-xl 2xl:text-3xl font-bold ">
             {data?.recentlyPlayedTrack.track.name}
           </div>
 

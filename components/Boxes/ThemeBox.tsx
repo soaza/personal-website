@@ -38,7 +38,7 @@ export const ThemeBox = (props: {
               <div
                 onClick={() => setBackgroundColor(color)}
                 key={color}
-                className={`rounded-full h-8 aspect-square ${color}
+                className={`rounded-full h-6 2xl:h-8 aspect-square ${color}
                 } hover:cursor-pointer border-2 ${
                   backgroundColor === color ? "border-gray-400" : ""
                 } `}
