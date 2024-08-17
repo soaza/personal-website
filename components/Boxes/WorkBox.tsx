@@ -6,10 +6,11 @@ export const WorkBox = () => {
   return (
     <Box>
       <div className="flex justify-center flex-col align-middle items-center h-full">
-        <TiktokLogoSVG className="h-full w-1/2 dark:fill-white" />
         <div className="text-2xl text-center">
-          Front-End Engineer at{" "}
-          <span className="font-bold text-2xl">TikTok</span>
+          Software Engineer at{" "}
+          <span className="font-bold text-2xl text-slate-500 dark:text-slate-300">
+            Breeze.Cash
+          </span>
         </div>
       </div>
     </Box>

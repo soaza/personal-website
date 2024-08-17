@@ -25,8 +25,12 @@ export const ProjectBox = () => {
           nus-reviews.com
         </a>
 
-        <p className="text-2xl ">
+        <p className="text-2xl text-slate-500 dark:text-slate-300">
           Read module reviews from the NUS community and submit your own!
+        </p>
+
+        <p className="text-xl font-bold pt-12">
+          No longer maintained as of 2024.
         </p>
       </div>
     </Box>
